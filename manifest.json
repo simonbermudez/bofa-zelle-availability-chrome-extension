@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Bank Of America Zelle Availability",
+    "description": "Wondering how much availability do you have for zelle transactions in your Bank of America account? Use this extension to find out",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://secure.bankofamerica.com/deposit-details/activity/*"],
+          "js": ["content.js"]
+        }
+      ],
+    "background":{
+        "scripts":["background.js"],
+        "persistent":false
+    },
+    "permissions": [
+        "storage"
+    ]
+  }
