@@ -4,6 +4,9 @@ let USDollar = new Intl.NumberFormat('en-US', {
 });
 
 chrome.storage.local.get(["transactions"], (result) => {
+    if (!result.transactions) {
+        return
+    }
     let transactions = result.transactions
 
     transactions = transactions.filter(transaction => 

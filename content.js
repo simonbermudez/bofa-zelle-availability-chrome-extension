@@ -24,7 +24,7 @@ const scrapeTransactions = async () => {
     chrome.runtime.sendMessage({gettingTransactions: true}, (response) => {
         console.log(response)
     })
-    for (let i = 1; i <=0; i++) {
+    for (let i = 1; i <=1; i++) {
         await clickViewMore()
     }
     return getTransactions()
